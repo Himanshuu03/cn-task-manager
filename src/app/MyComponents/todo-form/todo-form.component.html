@@ -5,10 +5,10 @@
         
         <label class="label-feild">Description</label>
         <textarea class="input-field desc" placeholder="Description" [(ngModel)]="newTodo.desc" name="desc" required></textarea>
-        
+
         <label class="label-feild">Due Date</label>
         <input class="input-field" type="date" placeholder="Date" [(ngModel)]="newTodo.dueDate" name="dueDate" required/>
-        
+        <br/>
         <label class="label-feild">Priority</label>
         <div class="priority-btn">
             <label class="label-feild"><input type="radio" name="priority" value="1" [(ngModel)]="newTodo.priority" required/>Low<span class="low"></span></label>

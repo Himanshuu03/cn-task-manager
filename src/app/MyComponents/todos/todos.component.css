@@ -91,12 +91,16 @@ span {
     transition: all ease-in-out 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.sorting-board ul{
+.priority-setter ul{
     display: flex;
-    gap: 10px;
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
+}
+.sorting-board ul li{
+    max-width: 100px;
+    padding: 10px;
+    cursor: pointer;
 }
 .strikethrough {
     text-decoration: line-through; 
@@ -107,6 +111,7 @@ span {
 @media screen and (max-width: 786px) {
     .todo {
         width: max-content;
+        min-width: 350px;
         gap:10px;
     }
     .todo-content {

@@ -1,8 +1,8 @@
 <div class="sorting-board">
     <p>Sort By:</p>
-    <div>
+    <div class="priority-setter">
         <ul>
-            <li><button class="due-date-btn" (click)="sortTodosByDueDate()">Due Date</button></li>
+            <li (click)="sortTodosByDueDate()" class="due-date-btn">Due Date</li>
             <li>
                 <label>Priority : </label>
                 <select (change)="sortTodosByPriority($event)">
