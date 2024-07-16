@@ -1,0 +1,21 @@
+<div class="task-form">
+    <form (ngSubmit)="editTask()">
+        <label class="label-feild">Title</label>
+        <input class="input-field" type="text" placeholder="Title" name="title" [(ngModel)]="newTodo.title" required/>
+        
+        <label class="label-feild">Description</label>
+        <textarea class="input-field desc" placeholder="Description" name="desc" [(ngModel)]="newTodo.desc" required></textarea>
+
+        <label class="label-feild">Due Date</label>
+        <input class="input-field" type="date" placeholder="Date" name="dueDate" [(ngModel)]="newTodo.dueDate" name="dueDate" required/>
+        <br/>
+        <label class="label-feild">Priority</label>
+        <div class="priority-btn">
+            <label class="label-feild"><input type="radio" name="priority" value="1" [(ngModel)]="newTodo.priority" required/>Low<span class="low"></span></label>
+            <label class="label-feild"><input type="radio" name="priority" value="2"[(ngModel)]="newTodo.priority"  />Medium<span class="mid"></span></label>
+            <label class="label-feild"><input type="radio" name="priority" value="3"[(ngModel)]="newTodo.priority" />High<span class="high"></span></label> 
+        </div>
+        <button type="submit" class="task-form-submit-btn">Edit Task</button>
+        <button type="button" class="cancel" (click)="cancelEdit()">Cancel</button>
+    </form>
+</div>

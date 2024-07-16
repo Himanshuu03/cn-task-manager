@@ -7,7 +7,6 @@ interface Todo {
   active: number;
   priority: number;
   dueDate: string;
-
 }
 @Component({
   selector: 'app-todo-form',
@@ -47,7 +46,13 @@ export class TodoFormComponent {
       alert('Please fill out all fields.');
       return;
     }
+    if(localStorage !== undefined){
+      const todos = JSON.parse(localStorage.getItem('todos') || '[]');
+      const size = todos.length;
+      this.newTodo.id = size + 1;
+    }
     this.addTodo.emit(this.newTodo);
     this.resetForm();
   } 
+
 }

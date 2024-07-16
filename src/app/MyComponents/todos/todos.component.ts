@@ -1,5 +1,6 @@
-import { NgClass, NgFor } from '@angular/common';
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { NgClass, NgFor,NgIf } from '@angular/common';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { TodoEditFormComponent } from "../todo-edit-form/todo-edit-form.component";
 
 interface Todo {
   id: number;
@@ -13,15 +14,24 @@ interface Todo {
 @Component({
   selector: 'app-todos',
   standalone: true,
-  imports: [NgFor, NgClass],
+  imports: [NgFor, NgClass, NgIf, TodoEditFormComponent],
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnChanges {
   @Input() newTodo!: Todo;
+
   todos: Todo[] = [];
   filteredTodos: Todo[] = [];
-
+  edit:Boolean = false;
+  editedTodo :Todo = {
+    id: 0,
+    title: '',
+    desc: '',
+    active: 0,
+    priority: 0,
+    dueDate: ''
+  }
   constructor() {
     if (typeof localStorage !== 'undefined') {
       const storedTodos = localStorage.getItem('todos');
@@ -134,4 +144,12 @@ export class TodosComponent implements OnChanges {
       localStorage.setItem('todos', JSON.stringify(this.todos));
     }
   }
+  editTodo(todo: Todo) {
+    this.edit = true;
+    this.editedTodo = todo;
+  }
+  cancelEdit(edit:Boolean){
+    this.edit = edit;
+  }
+
 }

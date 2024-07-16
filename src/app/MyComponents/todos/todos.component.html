@@ -42,9 +42,13 @@
             </div>
             <div class="todo-end">
                 <p>{{item.dueDate}}</p>
-                <span>📝</span>
+                <span (click)="editTodo(item)">📝</span>
                 <span (click)="deleteTodo(item)">🗑️</span>
             </div>
         </div>
     </ng-container>
+</div>
+<p *ngIf="filteredTodos.length == 0" class="not-task">No tasks found</p>
+<div *ngIf="edit">
+    <app-todo-edit-form (editCancel)="cancelEdit($event)" [editedTodo]="editedTodo" [todos]="todos"></app-todo-edit-form>
 </div>

@@ -108,6 +108,9 @@ span {
 .completed{
     background-color: rgb(234, 234, 234,0.8);
 }
+.not-task{
+    text-align: center;
+}
 @media screen and (max-width: 786px) {
     .todo {
         width: max-content;
