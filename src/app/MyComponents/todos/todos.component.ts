@@ -67,6 +67,7 @@ export class TodosComponent implements OnChanges {
   }
 
   deleteTodo(todo: Todo) {
+    this.edit = false;
     const index = this.todos.indexOf(todo);
     if (index > -1) {
       this.todos.splice(index, 1);
@@ -145,8 +146,12 @@ export class TodosComponent implements OnChanges {
     }
   }
   editTodo(todo: Todo) {
-    this.edit = true;
-    this.editedTodo = todo;
+    if(this.edit){
+      alert('Please finish editing the current task before editing another task');
+    }else{
+      this.edit = true;
+      this.editedTodo = todo;
+    }
   }
   cancelEdit(edit:Boolean){
     this.edit = edit;

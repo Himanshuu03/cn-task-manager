@@ -111,6 +111,9 @@ span {
 .not-task{
     text-align: center;
 }
+.edit-todo{
+    margin-bottom: 20px;
+}
 @media screen and (max-width: 786px) {
     .todo {
         width: max-content;

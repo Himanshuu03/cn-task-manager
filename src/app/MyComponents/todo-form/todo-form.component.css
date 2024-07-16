@@ -60,11 +60,17 @@ span{
     padding: 6px;
     font-size: large;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: white;
+    background-color:rgb(252, 218, 252);
     cursor: pointer;
     font-weight: 400;
 }
 .task-form button:hover{
     transition: all ease-in-out 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom:20px ;
 }

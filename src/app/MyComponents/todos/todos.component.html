@@ -25,6 +25,9 @@
         </ul>
     </div>
 </div>
+<div class="edit-todo" *ngIf="edit">
+    <app-todo-edit-form (editCancel)="cancelEdit($event)" [editedTodo]="editedTodo" [todos]="todos"></app-todo-edit-form>
+</div>
 <div class="todoss">
     <ng-container *ngFor="let item of filteredTodos">
         <div class="todo" [ngClass]="{
@@ -49,6 +52,4 @@
     </ng-container>
 </div>
 <p *ngIf="filteredTodos.length == 0" class="not-task">No tasks found</p>
-<div *ngIf="edit">
-    <app-todo-edit-form (editCancel)="cancelEdit($event)" [editedTodo]="editedTodo" [todos]="todos"></app-todo-edit-form>
-</div>
+
