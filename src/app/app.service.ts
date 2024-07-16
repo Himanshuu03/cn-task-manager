@@ -4,8 +4,7 @@ import { Injectable } from '@angular/core';
 export class AppService {
     downloadFile(data:any, filename = 'data') {
         let csvData = this.ConvertToCSV(data,
-            ['id', 
-             'title',
+            [ 'title',
              'desc', 
              'dueDate', 
              'priority',
