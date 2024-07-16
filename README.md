@@ -37,7 +37,7 @@ Before you begin, ensure you have met the following requirements:
    cd task-manager
 3. Install the dependencies:
    ```bash
-  npm install
+   npm install
 
 ### Running the Application
 1. Start the development server:
@@ -48,3 +48,6 @@ Before you begin, ensure you have met the following requirements:
 
 ### Deployment
 The application is deployed and accessible at https://cn-task-manager.vercel.app/.
+
+### Snapshot
+![how it look](./snapshot/task-manager.png)
