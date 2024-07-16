@@ -1,0 +1,49 @@
+<div class="sorting-board">
+    <p>Sort By:</p>
+    <div>
+        <ul>
+            <li><button class="due-date-btn" (click)="sortTodosByDueDate()">Due Date</button></li>
+            <li>
+                <label>Priority : </label>
+                <select (change)="sortTodosByPriority($event)">
+                    <option value="0">All</option>
+                    <option value="1">Low</option>
+                    <option value="2">Mid</option>
+                    <option value="3">High</option>
+                    <option value="4">Low to High</option>
+                    <option value="5">High to Low</option>
+                </select>
+            </li>
+            <li>
+                <label>Status : </label>
+                <select (change)="filterTodosByStatus($event)">
+                    <option value="2">All</option>
+                    <option value="0">Pending</option>
+                    <option value="1">Completed</option>  
+                </select>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="todoss">
+    <ng-container *ngFor="let item of filteredTodos">
+        <div class="todo" [ngClass]="{
+            'low': item.priority == 1,
+            'mid': item.priority == 2,
+            'high': item.priority == 3
+        }">
+            <div class="todo-start">
+                <input type="checkbox" class="check" [checked]="item.active == 1" (change)="toggleTodoStatus(item)">
+                <div class="todo-content" [ngClass]="{'strikethrough': item.active == 1}">
+                    <p>{{item.title}}</p>
+                    <p>{{item.desc}}</p>
+                </div>
+            </div>
+            <div class="todo-end">
+                <p>{{item.dueDate}}</p>
+                <span>📝</span>
+                <span (click)="deleteTodo(item)">🗑️</span>
+            </div>
+        </div>
+    </ng-container>
+</div>

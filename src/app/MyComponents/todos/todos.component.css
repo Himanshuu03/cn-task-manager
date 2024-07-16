@@ -1,0 +1,114 @@
+.todoss {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    max-height: 500px;
+    overflow: scroll;
+}
+input[type="checkbox"] {
+    width: 20px;
+    height: 15px;
+}
+.todo {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.todo-start {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.todo-content {
+    min-width: 350px;
+}
+.todo-content > p:nth-child(1) {
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+.todo-content > p:nth-child(2) {
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+.todo-end > p:nth-child(1) {
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+span {
+    padding-right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.priority{
+    padding-right: 0px;
+    display: inline-block;
+    margin-left:10px ;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+.high{
+    background-color: rgb(250, 79, 79);
+}
+.mid{
+    background-color: rgb(249, 255, 85);
+}
+.low{
+    background-color: rgb(85, 255, 85);
+}
+.sorting-board{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom:20px ;
+    align-items: center;
+}
+.sorting-board p{
+    font-weight: 300;
+}
+.due-date-btn{
+    all:unset;
+    text-align: center;
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    cursor: pointer;
+}
+.due-date-btn:hover{
+    transition: all ease-in-out 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.sorting-board ul{
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+.strikethrough {
+    text-decoration: line-through;   
+}
+@media screen and (max-width: 786px) {
+    .todo {
+        width: max-content;
+        gap:10px;
+    }
+    .todo-content {
+        min-width: max-content;
+    }
+    .sorting-board{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
