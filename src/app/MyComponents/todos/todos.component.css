@@ -29,11 +29,13 @@ input[type="checkbox"] {
     min-width: 350px;
 }
 .todo-content > p:nth-child(1) {
-    font-weight: 300;
+    font-weight:lighter;
+    font-size: 18px;
     padding-bottom: 10px;
 }
 .todo-content > p:nth-child(2) {
     font-weight: 400;
+    font-size: 16px;
     padding-bottom: 10px;
 }
 .todo-end > p:nth-child(1) {
@@ -55,13 +57,13 @@ span {
     height: 10px;
 }
 .high{
-    background-color: rgb(250, 79, 79);
+    border-left: 8px solid rgb(255, 59, 59);
 }
 .mid{
-    background-color: rgb(249, 255, 85);
+    border-left: 8px solid yellow ;
 }
 .low{
-    background-color: rgb(85, 255, 85);
+    border-left: 8px solid rgb(85, 255, 85) ;
 }
 .sorting-board{
     display: flex;
@@ -97,7 +99,10 @@ span {
     list-style: none;
 }
 .strikethrough {
-    text-decoration: line-through;   
+    text-decoration: line-through; 
+}
+.completed{
+    background-color: rgb(234, 234, 234,0.8);
 }
 @media screen and (max-width: 786px) {
     .todo {
@@ -110,5 +115,12 @@ span {
     .sorting-board{
         flex-direction: column;
         gap: 10px;
+    }
+    .sorting-board ul{
+        display: flex;
+        gap: 0px;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
     }
 }

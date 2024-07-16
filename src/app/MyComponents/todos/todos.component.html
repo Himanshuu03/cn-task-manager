@@ -30,7 +30,8 @@
         <div class="todo" [ngClass]="{
             'low': item.priority == 1,
             'mid': item.priority == 2,
-            'high': item.priority == 3
+            'high': item.priority == 3,
+            'completed': item.active == 1
         }">
             <div class="todo-start">
                 <input type="checkbox" class="check" [checked]="item.active == 1" (change)="toggleTodoStatus(item)">
