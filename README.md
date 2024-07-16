@@ -1,27 +1,50 @@
-# Taskmanager
+# Task Manager
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+## Overview
 
-## Development server
+Task Manager is a simple yet powerful application designed to help you manage your tasks efficiently. This project allows you to create, edit, and organize tasks with important attributes such as title, description, due date, and priority. You can also sort your tasks based on priority, due date, and status. The application utilizes local storage to persist your tasks, ensuring your data is saved across sessions.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **Create Tasks**: Add new tasks with a title, description, due date, and priority.
+- **Edit Tasks**: Modify existing tasks to update their information.
+- **Sort Tasks**: Organize your tasks by priority, due date, and status.
+- **Local Storage**: Save tasks in the browser's local storage to persist data across sessions.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
 
-## Build
+- Angular
+- TypeScript
+- HTML
+- CSS
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Getting Started
 
-## Running unit tests
+### Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Before you begin, ensure you have met the following requirements:
 
-## Running end-to-end tests
+- Node.js installed on your machine
+- Angular CLI installed globally
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Installation
 
-## Further help
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/task-manager.git
+2. Navigate to the project directory:
+   ```bash
+   cd task-manager
+3. Install the dependencies:
+   ```bash
+  npm install
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Running the Application
+1. Start the development server:
+   ```bash
+   ng serve
+2. Open your browser and navigate to http://localhost:4200/.
+
+
+### Deployment
+The application is deployed and accessible at https://cn-task-manager.vercel.app/.
