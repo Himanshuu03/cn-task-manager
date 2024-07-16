@@ -1,8 +1,10 @@
 <div class="container">
   <app-navbar></app-navbar>
+  <div class="download-holder">
+    <button (click)="download()" class="download-btn">Download Todos as CSV</button>
+  </div>
   <div class="todo-container">
     <app-todo-form (addTodo)="addNewTodo($event)"></app-todo-form>
     <app-todos [newTodo]="newTodo"></app-todos>
   </div>
-  <button (click)="download()">Download Todos as CSV</button>
 </div>
